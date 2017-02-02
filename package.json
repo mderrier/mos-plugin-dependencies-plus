@@ -2,7 +2,7 @@
   "name": "mos-plugin-dependencies-plus",
   "description": "A mos plugin that create dependencies sections with versions",
   "homepage": "https://github.com/mderrier/mos-plugin-dependencies-plus#readme",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "author": {
     "name": "maximilien.derrier@gmail.com"
