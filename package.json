@@ -1,42 +1,24 @@
 {
   "name": "mos-plugin-dependencies-plus",
-  "version": "1.0.0",
   "description": "A mos plugin that create dependencies sections with versions",
+  "homepage": "https://github.com/mderrier/mos-plugin-dependencies-plus#readme",
+  "version": "1.0.1",
   "main": "dist/index.js",
-  "jsnext:main": "src/index.js",
-  "mos": {
-    "installation": {
-      "useShortAlias": true
-    }
-  },
- "files": [
-    "src/",
-    "dist/"
-  ],
-  "scripts": {
-    "test-es5": "mocha --compilers js:babel-register && npm run lint",
-    "test": "npm run test-es5 && node ../mos/bin/mos.js test -x=\"test/**\"",
-    "lint": "eslint src/**/*.js",
-    "cover": "istanbul cover -x \"**/*.spec.js\" node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-register -R spec",
-    "md": "node ../mos/bin/mos.js -x=\"test/**\"",
-    "compile": "babel src --out-dir dist",
-    "prepublish": "npm run compile"
+  "author": {
+    "name": "maximilien.derrier@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mderrier/mos-plugin-dependencies-plus.git"
   },
-  "keywords": [
-    "mos-plugin",
-    "dependencies",
-    "markdown"
-  ],
-  "author": "maximilien.derrier@gmail.com",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mderrier/mos-plugin-dependencies-plus/issues"
   },
-  "homepage": "https://github.com/mderrier/mos-plugin-dependencies-plus#readme",
+  "keywords": [
+    "dependencies",
+    "markdown",
+    "mos-plugin"
+  ],
   "dependencies": {
     "babel-runtime": "^6.9.0",
     "github-url-to-object": "^2.2.1",
@@ -61,5 +43,25 @@
   },
   "engines": {
     "node": ">=4"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "compile": "babel src --out-dir dist",
+    "cover": "istanbul cover -x \"**/*.spec.js\" node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-register -R spec",
+    "lint": "eslint src/**/*.js",
+    "md": "node ../mos/bin/mos.js -x=\"test/**\"",
+    "prepublish": "npm run compile",
+    "test": "npm run test-es5 && node ../mos/bin/mos.js test -x=\"test/**\"",
+    "test-es5": "mocha --compilers js:babel-register && npm run lint"
+  },
+  "license": "MIT",
+  "jsnext:main": "src/index.js",
+  "mos": {
+    "installation": {
+      "useShortAlias": true
+    }
   }
 }
