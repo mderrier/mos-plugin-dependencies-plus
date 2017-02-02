@@ -1,3 +1,10 @@
+<a name="1.0.7"></a>
+## 1.0.7 (2017-02-02)
+
+* typo(space): add space ([1091710](https://github.com/mderrier/mos-plugin-dependencies-plus/commit/1091710))
+
+
+
 <a name="1.0.6"></a>
 ## 1.0.6 (2017-02-02)
 
