@@ -1,0 +1,65 @@
+{
+  "name": "mos-plugin-dependencies-plus",
+  "version": "1.0.0",
+  "description": "A mos plugin that create dependencies sections with versions",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "mos": {
+    "installation": {
+      "useShortAlias": true
+    }
+  },
+ "files": [
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "test-es5": "mocha --compilers js:babel-register && npm run lint",
+    "test": "npm run test-es5 && node ../mos/bin/mos.js test -x=\"test/**\"",
+    "lint": "eslint src/**/*.js",
+    "cover": "istanbul cover -x \"**/*.spec.js\" node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-register -R spec",
+    "md": "node ../mos/bin/mos.js -x=\"test/**\"",
+    "compile": "babel src --out-dir dist",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mderrier/mos-plugin-dependencies-plus.git"
+  },
+  "keywords": [
+    "mos-plugin",
+    "dependencies",
+    "markdown"
+  ],
+  "author": "maximilien.derrier@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mderrier/mos-plugin-dependencies-plus/issues"
+  },
+  "homepage": "https://github.com/mderrier/mos-plugin-dependencies-plus#readme",
+  "dependencies": {
+    "babel-runtime": "^6.9.0",
+    "github-url-to-object": "^2.2.1",
+    "shieldman": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.4.1",
+    "eslint": "^2.13.1",
+    "eslint-config-standard": "^5.3.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "git-dirty": "latest",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^2.3.4",
+    "mos-plugin-ejs": "1.1.2",
+    "mos-processor": "1.2.2"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}
