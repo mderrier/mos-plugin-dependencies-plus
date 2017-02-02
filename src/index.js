@@ -2,7 +2,7 @@ import renderDeps from './render-deps'
 const shield = require('shieldman')
 
 export default function plugin (mos, markdown) {
-  mos.scope.dependencies = opts => {
+  mos.scope.dependenciesPlus = opts => {
     opts = opts || {}
 
     return `## <a name="dependencies">Dependencies</a>${maybeShield('deps', opts.shield)}\n\n${
@@ -13,7 +13,7 @@ export default function plugin (mos, markdown) {
     }\n`
   }
 
-  mos.scope.devDependencies = opts => {
+  mos.scope.devDependenciesPlus = opts => {
     opts = opts || {}
 
     return `## <a name="dev-dependencies">Dev Dependencies</a>${maybeShield('devDeps', opts.shield)}\n\n${

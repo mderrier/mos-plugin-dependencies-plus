@@ -38,6 +38,7 @@
     "git-dirty": "latest",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^2.3.4",
+    "mos": "1.3.1",
     "mos-plugin-ejs": "1.1.2",
     "mos-processor": "1.2.2"
   },
@@ -52,10 +53,11 @@
     "compile": "babel src --out-dir dist",
     "cover": "istanbul cover -x \"**/*.spec.js\" node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-register -R spec",
     "lint": "eslint src/**/*.js",
-    "md": "node ../mos/bin/mos.js -x=\"test/**\"",
+    "md": "mos",
     "prepublish": "npm run compile",
-    "test": "npm run test-es5 && node ../mos/bin/mos.js test -x=\"test/**\"",
-    "test-es5": "mocha --compilers js:babel-register && npm run lint"
+    "test": "npm run test-es5 && mos test -x=\"test/**\"",
+    "test-es5": "mocha --compilers js:babel-register && npm run lint",
+    "?md": "echo \"Update the markdown files\""
   },
   "license": "MIT",
   "jsnext:main": "src/index.js",

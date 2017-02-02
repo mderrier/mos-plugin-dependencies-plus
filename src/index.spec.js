@@ -10,7 +10,7 @@ const mos = require('mos-processor')
 const ejs = require('mos-plugin-ejs')
 import deps from './index'
 
-describe('mos-plugin-dependencies', () => {
+describe('mos-plugin-dependencies-plus', () => {
   fixtures.forEach(fixture => {
     const filepath = path.join(ROOT, fixture)
     const output = fs.readFileSync(path.join(filepath, 'output.md'), 'utf-8')
