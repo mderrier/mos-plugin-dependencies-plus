@@ -56,7 +56,7 @@
     "lint": "eslint src/**/*.js",
     "md": "mos",
     "prepublish": "npm run compile",
-    "test": "npm run test-es5 && mos test -x=\"test/**\"",
+    "test": "npm run test-es5",
     "test-es5": "mocha --compilers js:babel-register && npm run lint"
   },
   "license": "MIT",
