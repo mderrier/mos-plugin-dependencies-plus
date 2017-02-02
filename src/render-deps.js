@@ -6,7 +6,7 @@ export default function renderDeps (opts) {
   if (!depDetails.length) return 'None'
 
   return depDetails
-    .map(depDetails => `- [${depDetails.name}](${getDepURL(depDetails)}): ${depDetails.version ? depDetails.version : ''}${depDetails.description.trim()}`)
+    .map(depDetails => `- [${depDetails.name}](${getDepURL(depDetails)}): ${depDetails.version ? depDetails.version + ' ' : ''}${depDetails.description.trim()}`)
     .join('\n')
 }
 
