@@ -1,3 +1,10 @@
+<a name="1.0.5"></a>
+## 1.0.5 (2017-02-02)
+
+* feature(generate): add version ([f2f3182](https://github.com/mderrier/mos-plugin-dependencies-plus/commit/f2f3182))
+
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2017-02-02)
 
